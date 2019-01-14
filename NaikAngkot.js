@@ -9,26 +9,28 @@ function naikAngkot(arrPenumpang) {
 
     for(var i = 0; i < arrPenumpang.length; i++) {
         var tagihan = {};
-        var count = 0;
-        var temp = false;
+        // var count = 0;
+        // var temp = false;
 
         tagihan.penumpang = arrPenumpang[i][0];
         tagihan.naikDari = arrPenumpang[i][1];
         tagihan.tujuan = arrPenumpang[i][2];
 
-        for(var j = 0; j < rute.length; j++) {
-            if(rute[j] === tagihan.naikDari) {
-                temp = true;
-            }
-            if(rute[j] === tagihan.tujuan) {
-                break;
-            }
-            if(temp === true) {
-                count++;
-            }
-        }
+        // for(var j = 0; j < rute.length; j++) {
+        //     if(rute[j] === tagihan.naikDari) {
+        //         temp = true;
+        //     }
+        //     if(rute[j] === tagihan.tujuan) {
+        //         break;
+        //     }
+        //     if(temp === true) {
+        //         count++;
+        //     }
+        // }
 
-        tagihan.bayar = 2000 * count;
+        // tagihan.bayar = 2000 * count;
+        
+        tagihan.bayar = 2000 * (rute.indexOf(tagihan.tujuan) - rute.indexOf(tagihan.naikDari));
         result.push(tagihan);
     }
 
