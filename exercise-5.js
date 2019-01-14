@@ -72,6 +72,9 @@ function ubahHuruf(kata) {
             case 'w':
                 result += 'x';
                 break;
+            case 'x':
+                result += 'y';
+                break;
             case 'y':
                 result += 'z';
                 break;
