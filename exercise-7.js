@@ -1,6 +1,19 @@
 function urutkanAbjad(str) {
     var result = str.split('');
-    return result.sort().join('');
+
+    // manual sort ascending
+    for(var i = 0; i < result.length; i++) {
+        for(var j = i; j < result.length; j++) {
+            var temp = '';
+            if(result[j] < result[i]) {
+                temp = result[i];
+                result[i] = result[j];
+                result[j] = temp;
+            }
+        }
+    }
+
+    return result.join('');
 }
 
 // TEST CASES

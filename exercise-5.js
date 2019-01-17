@@ -1,86 +1,13 @@
 function ubahHuruf(kata) {
     var result = '';
+    var alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    var newAlphabet = 'bcdefghijklmnopqrstuvwxyza'
 
     for(var i = 0; i < kata.length; i++) {
-        switch(kata[i]) {
-            case 'a':
-                result += 'b';
-                break;
-            case 'b':
-                result += 'c';
-                break;
-            case 'c':
-                result += 'd';
-                break;
-            case 'd':
-                result += 'e';
-                break;
-            case 'e':
-                result += 'f';
-                break;
-            case 'f':
-                result += 'g';
-                break;
-            case 'g':
-                result += 'h';
-                break;
-            case 'h':
-                result += 'i';
-                break;
-            case 'i':
-                result += 'j';
-                break;
-            case 'j':
-                result += 'k';
-                break;
-            case 'k':
-                result += 'l';
-                break;
-            case 'l':
-                result += 'm';
-                break;
-            case 'm':
-                result += 'n';
-                break;
-            case 'n':
-                result += 'o';
-                break;
-            case 'o':
-                result += 'p';
-                break;
-            case 'p':
-                result += 'q';
-                break;
-            case 'q':
-                result += 'r';
-                break;
-            case 'r':
-                result += 's';
-                break;
-            case 's':
-                result += 't';
-                break;
-            case 't':
-                result += 'u';
-                break;
-            case 'u':
-                result += 'v';
-                break;
-            case 'v':
-                result += 'w';
-                break;
-            case 'w':
-                result += 'x';
-                break;
-            case 'x':
-                result += 'y';
-                break;
-            case 'y':
-                result += 'z';
-                break;
-            case 'z':
-                result += 'a';
-                break;
+        for(var j = 0; j < alphabet.length; j++) {
+            if(kata[i] === alphabet[j]) {
+                result += newAlphabet[j];
+            }
         }
     }
 

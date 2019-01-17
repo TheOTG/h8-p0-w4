@@ -9,33 +9,23 @@ function shoppingTime(memberId, money) {
     }
 
     var change = money;
-    var listItem = [];
-    var result = {};
+    var listItem = [{ item: 'Sepatu Stacattu', price: 1500000 }, { item: 'Baju Zoro', price: 500000 },
+                        { item: 'Baju H&N', price: 250000 }, { item: 'Sweater Uniklooh', price: 175000 }, 
+                        { item: 'Casing Handphone', price: 50000}];
 
-    if(change >= 1500000) {
-        change -= 1500000;
-        listItem.push('Sepatu Stacattu');
-    }
-    if(change >= 500000) {
-        change -= 500000;
-        listItem.push('Baju Zoro');
-    }
-    if(change >= 250000) {
-        change -= 250000;
-        listItem.push('Baju H&N');
-    }
-    if(change >= 175000) {
-        change -= 175000;
-        listItem.push('Sweater Uniklooh');
-    }
-    if(change >= 50000) {
-        change -= 50000;
-        listItem.push('Casing Handphone');
+    var result = {};
+    var boughtItem = [];
+
+    for(var i = 0; i < listItem.length; i++) {
+        if(change >= listItem[i].price) {
+            change -= listItem[i].price;
+            boughtItem.push(listItem[i].item);
+        }
     }
 
     result.memberId = memberId;
     result.money = money;
-    result.listPurchased = listItem;
+    result.listPurchased = boughtItem;
     result.changeMoney = change;
 
     return result;
