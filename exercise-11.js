@@ -10,8 +10,8 @@ function shoppingTime(memberId, money) {
 
     var change = money;
     var listItem = [{ item: 'Sepatu Stacattu', price: 1500000 }, { item: 'Baju Zoro', price: 500000 },
-                        { item: 'Baju H&N', price: 250000 }, { item: 'Sweater Uniklooh', price: 175000 }, 
-                        { item: 'Casing Handphone', price: 50000}];
+                    { item: 'Baju H&N', price: 250000 }, { item: 'Sweater Uniklooh', price: 175000 }, 
+                    { item: 'Casing Handphone', price: 50000 }];
 
     var result = {};
     var boughtItem = [];
